@@ -1,7 +1,7 @@
 # The Keyboard Tax
 
 What diacritic loss costs machine translation.
-Course project for *Essentials of NLP*, University of Zurich, autumn 2026.
+Course project for *Essentials in Text and Speech Processing*
 Lucia Ivan, Karen Olivia Reyes Mendoza, Thomas Schurter.
 
 ## Goal
