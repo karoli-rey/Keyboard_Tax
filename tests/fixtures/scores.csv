@@ -1,0 +1,5 @@
+sent_id,version,system,chrf,comet
+0,clean,nllb,100.0,0.95
+0,b_only,nllb,80.0,0.82
+1,clean,nllb,100.0,0.96
+1,stripped_100,nllb,85.0,0.70

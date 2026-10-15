@@ -1,0 +1,5 @@
+sent_id,version,system,src,hyp
+0,clean,nllb,O avô dele não pôde vir à festa.,His grandfather could not come to the party.
+0,b_only,nllb,O avô dele não pode vir a festa.,His grandfather can't come to the party.
+1,clean,nllb,Ela é professora e mora no Brasil.,She is a teacher and lives in Brazil.
+1,stripped_100,nllb,Ela e professora e mora no Brasil.,She and teacher and lives in Brazil.

@@ -1,0 +1,6 @@
+word,stripped,label,zipf,native_checked,lost,note
+avô,avo,A,2.1,yes,,corrected from B: avo is a real but very rare word
+não,nao,A,,yes,,
+pôde,pode,B,5.5,yes,tense (past to present),could becomes can
+à,a,B,7.2,yes,article (a + a),often translates the same
+é,e,B,7.0,yes,word class (verb to conjunction),is becomes and

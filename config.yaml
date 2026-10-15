@@ -1,0 +1,27 @@
+# All experiment settings. The code reads everything from here.
+# TODO values are decided by the team (see notes/decisions.md), then filled in here.
+
+source_language: por_Latn    # Portuguese: the text we remove accents from
+target_language: eng_Latn    # English: the translations and the reference answers
+split: TODO                  # which FLORES+ split we report on
+seed: 0                      # fixes every random choice, so runs repeat exactly
+
+dictionary: TODO             # step 2: path to the pt_BR Hunspell files (.dic + .aff)
+min_zipf: TODO               # step 2: Class B words rarer than this go to the native speaker
+review_sample: 50            # step 2: extra random words the native speaker checks
+normalize_unicode: {}        # step 2: characters to unify first (only needed for Romanian)
+
+versions:                    # step 3
+  - clean
+  - stripped_100
+  - a_only
+  - b_only
+  - noise
+
+systems:                     # step 4: exact model names
+  nllb: facebook/nllb-200-distilled-600M
+  opus_mt: Helsinki-NLP/opus-mt-ROMANCE-en    # there is no official pt-en model
+  llm: TODO
+llm_prompt: TODO
+
+comet_model: Unbabel/wmt22-comet-da   # step 5

@@ -1,0 +1,8 @@
+sent_id,version,src,n_a,n_b,n_chars
+0,clean,O avô dele não pôde vir à festa.,0,0,0
+0,stripped_100,O avo dele nao pode vir a festa.,2,2,4
+0,a_only,O avo dele nao pôde vir à festa.,2,0,2
+0,b_only,O avô dele não pode vir a festa.,0,2,2
+0,noise,O avô dwle não pôde vor à festa.,0,0,2
+1,clean,Ela é professora e mora no Brasil.,0,0,0
+1,stripped_100,Ela e professora e mora no Brasil.,0,1,1
