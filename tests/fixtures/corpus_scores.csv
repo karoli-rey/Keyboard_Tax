@@ -1,0 +1,4 @@
+version,system,bleu,chrf,comet
+clean,nllb,100.0,100.0,0.955
+b_only,nllb,60.0,80.0,0.82
+stripped_100,nllb,55.0,85.0,0.70

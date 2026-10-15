@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "keyboard-tax"
+version = "0.1.0"
+description = "What diacritic loss costs machine translation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Lucia Ivan" },
+  { name = "Karen Olivia Reyes Mendoza" },
+  { name = "Thomas Schurter" },
+]
+# Pin exact versions once the environment works for everyone.
+dependencies = [
+  "pandas",
+  "pyyaml",
+  "datasets",
+  "transformers",
+  "sentencepiece",
+  "torch",
+  "sacrebleu",
+  "unbabel-comet",
+  "spylls",
+  "wordfreq",
+  "statsmodels",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/keyboard_tax"]
+
+[tool.ruff]
+line-length = 100
