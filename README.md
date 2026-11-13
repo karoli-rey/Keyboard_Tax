@@ -44,6 +44,7 @@ the top of its file.
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
+scripts/get_dictionary.sh                       # pt_BR dictionary for step 2, to data/raw/
 pytest                                          # run the tests
 python -m keyboard_tax.versions --fixtures      # run a step on the example data
 python -m keyboard_tax.versions                 # run a step on the real data

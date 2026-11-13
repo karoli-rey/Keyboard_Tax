@@ -3,11 +3,13 @@
 
 source_language: por_Latn    # Portuguese: the text we remove accents from
 target_language: eng_Latn    # English: the translations and the reference answers
-split: TODO                  # which FLORES+ split we report on
+split: devtest               # which FLORES+ split we report on (1012 sentences)
 seed: 0                      # fixes every random choice, so runs repeat exactly
 
-dictionary: TODO             # step 2: path to the pt_BR Hunspell files (.dic + .aff)
-min_zipf: TODO               # step 2: Class B words rarer than this go to the native speaker
+dictionary: data/raw/pt_BR   # step 2: pt_BR Hunspell files without .dic/.aff
+                             #   (download with scripts/get_dictionary.sh)
+min_zipf: 99                 # step 2: Class B words rarer than this go to the native speaker
+                             #   99: every Class B word goes to the native speaker, see decisions.md
 review_sample: 50            # step 2: extra random words the native speaker checks
 normalize_unicode: {}        # step 2: characters to unify first (only needed for Romanian)
 
