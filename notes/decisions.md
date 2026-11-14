@@ -2,10 +2,10 @@
 
 ## Open questions (the Researcher answers these in week 1, the team agrees)
 
-- [ ] Which FLORES+ split do we report on?
-- [ ] Which pt_BR dictionary (source, version, licence)?
-- [ ] Frequency threshold for rare Class B words (`min_zipf`)?
-- [ ] How do we skip names?
+- [x] Which FLORES+ split do we report on?
+- [x] Which pt_BR dictionary (source, version, licence)?
+- [x] Frequency threshold for rare Class B words (`min_zipf`)?
+- [x] How do we skip names? (decided 2026-11-01)
 - [ ] Which LLM, its exact prompt, and where it runs (GPU or API)?
 - [ ] Rule for the targeted check (who writes the patterns, who double-checks them)?
 - [ ] Roles: who is Researcher, Coder 1 (steps 1–3), Coder 2 (steps 4–6)?
@@ -43,3 +43,9 @@ One line per decision, with the reason. This becomes the Method section of the r
 | 2026-10-14 | Release two things, not three: lexicon and challenge set. The real-message collection moves to future work | Not enough time, and collecting messages raises privacy and terms-of-use questions | Karen | proposed |
 | 2026-10-14 | Report uses the template headings; "Model training" becomes "Translation systems" | Graders look for the template questions; we train nothing | Lucy, Karen | proposed |
 | 2026-10-14 | New folders: `literature/` for the literature review, `report/` for the outline | Keep research, report plan and team notes apart | Karen | proposed |
+| 2026-11-01 | Skip a candidate name only if it never occurs lowercase and occurs capitalized away from a sentence start | Avoid treating sentence-initial capitalization as evidence that an accented word is a name | Coder 1 | proposed |
+| 2026-11-13 | FLORES+ split: `devtest` (1012 sentences) | `dev` stays free for trying things out; `devtest` is the split papers usually report | Thomas | proposed |
+| 2026-11-13 | Dictionary: LibreOffice pt_BR (VERO 3.2, LGPLv3/MPL), downloaded by `scripts/get_dictionary.sh`, not committed | Free, maintained Hunspell dictionary for Brazilian Portuguese; the licence allows use but we do not redistribute it | Thomas | proposed |
+| 2026-11-13 | `min_zipf: 99`: the native speaker reviews every Class B word | wordfreq also counts text typed without accents, so the stripped form looks too frequent ("musica" has Zipf 4.0, almost only as a typo of "música"); a frequency cut would count such words as Class B without a check, although no reader takes them for the rare real word | Thomas | proposed |
+| 2026-11-13 | Lexicon review in two passes: Claude (Anthropic) suggested labels for the 274 review words, then Thomas as native speaker checked and confirmed every one (`native_checked` = `yes`) | Faster review; the native speaker stays responsible for each label; the AI use is logged in `notes/ai_use.md` | Thomas | proposed |
+| 2026-11-13 | A word is Class B only if its stripped form is used in normal written Brazilian Portuguese. Rare or archaic verb forms, 2sg (tu) forms, abbreviations, prefixes and foreign words count as Class A | The dictionary also accepts forms no reader would think of. Result: 98 of the 224 automatic Class B words stay B, 126 become A; all 50 sampled Class A words stay A | Thomas | proposed |
