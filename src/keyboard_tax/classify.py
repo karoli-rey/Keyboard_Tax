@@ -86,6 +86,13 @@ def find_accented_words(sentences: pd.DataFrame) -> set[str]:
         text = unicodedata.normalize("NFC", str(text))
         sentence_start = 0
         for match in WORD_RE.finditer(text):
+            boundary = max(
+                text.rfind(".", sentence_start, match.start()),
+                text.rfind("!", sentence_start, match.start()),
+                text.rfind("?", sentence_start, match.start()),
+            )
+            if boundary >= sentence_start:
+                sentence_start = boundary + 1
             token = match.group()
             lowered = token.lower()
             if strip_diacritics(lowered) != lowered:
@@ -96,13 +103,6 @@ def find_accented_words(sentences: pd.DataFrame) -> set[str]:
                     lower_seen.add(lowered)
                 elif token[0].isupper() and not sentence_initial:
                     capitalized_noninitial.add(lowered)
-            boundary = max(
-                text.rfind(".", sentence_start, match.start()),
-                text.rfind("!", sentence_start, match.start()),
-                text.rfind("?", sentence_start, match.start()),
-            )
-            if boundary >= sentence_start:
-                sentence_start = boundary + 1
     return {word for word in accented if word in lower_seen or word not in capitalized_noninitial}
 
 
