@@ -49,8 +49,17 @@ def test_normalize_unifies_romanian_cedilla():
 
 
 def test_find_accented_words_skips_names_but_keeps_sentence_initial_words():
-    sentences = pd.DataFrame({"pt": ["É uma cidade. João encontrou Áurea; a mãe chegou."]})
+    sentences = pd.DataFrame(
+        {"pt": ["É uma cidade. Ontem João encontrou Áurea; a mãe chegou."]}
+    )
     assert find_accented_words(sentences) == {"é", "mãe"}
+
+
+def test_find_accented_words_keeps_the_first_word_of_a_second_sentence():
+    sentences = pd.DataFrame(
+        {"pt": ["Ele chegou cedo. Água fria caiu no chão.", "A Ásia é grande."]}
+    )
+    assert find_accented_words(sentences) == {"água", "chão", "é"}
 
 
 def test_build_lexicon_flags_rare_class_b_and_seeded_review_sample(monkeypatch):
