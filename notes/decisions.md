@@ -5,7 +5,7 @@
 - [x] Which FLORES+ split do we report on?
 - [x] Which pt_BR dictionary (source, version, licence)?
 - [x] Frequency threshold for rare Class B words (`min_zipf`)?
-- [ ] How do we skip names?
+- [x] How do we skip names? (decided 2026-11-01)
 - [ ] Which LLM, its exact prompt, and where it runs (GPU or API)?
 - [ ] Rule for the targeted check (who writes the patterns, who double-checks them)?
 - [ ] Roles: who is Researcher, Coder 1 (steps 1–3), Coder 2 (steps 4–6)?
