@@ -4,7 +4,8 @@
 # data/raw/ is in .gitignore: the dictionary is downloaded, never committed.
 set -euo pipefail
 
-BASE_URL="https://raw.githubusercontent.com/LibreOffice/dictionaries/master/pt_BR"
+# Fixed commit, not master: this is the dictionary version data/lexicon.csv was built with.
+BASE_URL="https://raw.githubusercontent.com/LibreOffice/dictionaries/c0865a85eb67dc377f2cf8e8fe2c4fa9e53f0dcb/pt_BR"
 TARGET="$(cd "$(dirname "$0")/.." && pwd)/data/raw"
 
 mkdir -p "$TARGET"
