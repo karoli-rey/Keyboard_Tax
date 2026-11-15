@@ -50,6 +50,10 @@ python -m keyboard_tax.versions --fixtures      # run a step on the example data
 python -m keyboard_tax.versions                 # run a step on the real data
 ```
 
+Steps 4 and 5 need a GPU for the full data: open `scripts/colab_gpu_run.ipynb` in Google Colab.
+On a laptop, try step 4 on the example data with
+`python -m keyboard_tax.translate --fixtures --systems opus_mt`.
+
 All settings (models, seed, thresholds) are in `config.yaml`.
 
 ## How we work

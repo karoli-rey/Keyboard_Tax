@@ -23,7 +23,16 @@ versions:                    # step 3
 systems:                     # step 4: exact model names
   nllb: facebook/nllb-200-distilled-600M
   opus_mt: Helsinki-NLP/opus-mt-ROMANCE-en    # there is no official pt-en model
-  llm: TODO
-llm_prompt: TODO
+  llm: Qwen/Qwen2.5-7B-Instruct               # proposed, see notes/decisions.md
+llm_4bit: true               # step 4: load the LLM in 4-bit, so it fits a free Colab GPU
+llm_prompt: |                # step 4: {text} is replaced by the Portuguese sentence
+  Translate the following Portuguese sentence into English. Output only the English translation, with no notes or explanations.
+
+  Portuguese: {text}
+  English:
+translation:                 # step 4: decoding settings, the same in every run
+  batch_size: 16             #   sentences per batch; lower it if the GPU runs out of memory
+  num_beams: 4               #   beam search for NLLB and Opus-MT (the LLM uses no sampling)
+  max_new_tokens: 256        #   longest translation, in tokens
 
 comet_model: Unbabel/wmt22-comet-da   # step 5
