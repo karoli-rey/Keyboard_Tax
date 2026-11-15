@@ -6,7 +6,7 @@
 - [x] Which pt_BR dictionary (source, version, licence)?
 - [x] Frequency threshold for rare Class B words (`min_zipf`)?
 - [x] How do we skip names? (decided 2026-11-01)
-- [ ] Which LLM, its exact prompt, and where it runs (GPU or API)?
+- [ ] Which LLM, its exact prompt, and where it runs (GPU or API)? (proposed 2026-11-15, see the log; the team still has to agree)
 - [ ] Rule for the targeted check (who writes the patterns, who double-checks them)?
 - [ ] Roles: who is Researcher, Coder 1 (steps 1–3), Coder 2 (steps 4–6)?
 
@@ -49,3 +49,9 @@ One line per decision, with the reason. This becomes the Method section of the r
 | 2026-11-13 | `min_zipf: 99`: the native speaker reviews every Class B word | wordfreq also counts text typed without accents, so the stripped form looks too frequent ("musica" has Zipf 4.0, almost only as a typo of "música"); a frequency cut would count such words as Class B without a check, although no reader takes them for the rare real word | Thomas | proposed |
 | 2026-11-13 | Lexicon review in two passes: Claude (Anthropic) suggested labels for the 274 review words, then Thomas as native speaker checked and confirmed every one (`native_checked` = `yes`) | Faster review; the native speaker stays responsible for each label; the AI use is logged in `notes/ai_use.md` | Thomas | proposed |
 | 2026-11-13 | A word is Class B only if its stripped form is used in normal written Brazilian Portuguese. Rare or archaic verb forms, 2sg (tu) forms, abbreviations, prefixes and foreign words count as Class A | The dictionary also accepts forms no reader would think of. Result: 98 of the 224 automatic Class B words stay B, 126 become A; all 50 sampled Class A words stay A | Thomas | proposed |
+| 2026-11-15 | LLM: `Qwen/Qwen2.5-7B-Instruct`, loaded in 4-bit (`llm_4bit: true`) | Open weights (Apache 2.0), free to download, lists Portuguese among its languages, fits a free Colab GPU in 4-bit; not a Claude model, because Claude suggested the first-pass lexicon labels | Olivia | proposed |
+| 2026-11-15 | LLM prompt: one fixed prompt in `config.yaml`, one sentence per request, no sampling (always the most likely next word); to be tried on `dev` sentences only, never on `devtest` | Repeatable answers; the prompt is not tuned on the sentences we report on | Olivia | proposed |
+| 2026-11-15 | NLLB and Opus-MT: beam search with beam size 4, at most 256 new tokens, the same for both | A common default; equal settings keep the two translators comparable | Olivia | proposed |
+| 2026-11-15 | Step 4 translates each distinct sentence once per system and saves every finished batch in `outputs/4_cache/`; the file name carries a code of the settings | Many versions share a text; a crashed GPU session loses nothing; changed settings never reuse old translations | Olivia | proposed |
+| 2026-11-15 | LLM answers are cleaned by fixed rules (`clean_llm_output`): a label in front, notes after a blank line, quotation marks around the whole answer; the raw answer stays in the cache | Extra text such as "Here is the translation:" would lower the scores for a reason that has nothing to do with accents | Olivia | proposed |
+| 2026-11-15 | Steps 4 and 5 run on a free Google Colab GPU (`scripts/colab_gpu_run.ipynb`), outputs saved to Google Drive | The models are too slow on a laptop; Colab is free and the run can be repeated by anyone | Olivia | proposed |
