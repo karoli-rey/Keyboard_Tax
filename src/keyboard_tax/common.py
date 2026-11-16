@@ -41,6 +41,10 @@ TABLES: dict[str, tuple[str, list[str]]] = {
         "outputs/5_corpus_scores.csv",
         ["subset", "version", "system", "n", "bleu", "chrf", "comet"],
     ),
+    "challenge_words": (
+        "data/challenge_words.csv",
+        ["word", "correct_reading", "correct_pattern", "wrong_pattern"],
+    ),
     "challenge_set": (
         "data/challenge_set.csv",
         ["sent_id", "word", "correct_reading", "correct_pattern", "wrong_pattern"],
