@@ -1,0 +1,74 @@
+word,correct_reading,correct_pattern,wrong_pattern
+país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+forças,noun: forces,force|forces|strength|power|powers|troops|army|military,gallows|gibbet|noose
+manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+caça,noun: hunting / fighter jet,hunt|hunts|hunting|hunted|hunter|hunters|game|chase|fighter|fighters|poaching,poo|poop|poops|shit|crap|feces|faeces|excrement|caca
+bebê,noun: baby,baby|babies|infant|infants|newborn|newborns,drinks|drink|drinking|drank
+irá,future: will,will|'ll|shall|going,anger|ire|wrath|rage|fury
+precisará,future: will need,will|'ll|shall|going,had|would
+ajudará,future: will help,will|'ll|shall|going,had|would|helped
+acontecerá,future: will happen,will|'ll|shall|going,had|would|happened|occurred
+cobrirá,future: will cover,will|'ll|shall|going,had|would|covered
+concorrerá,future: will compete,will|'ll|shall|going,had|would|competed|ran
+conseguirá,future: will manage,will|'ll|shall|going,had|would|managed|succeeded|achieved
+desaparecerá,future: will disappear,will|'ll|shall|going,had|would|disappeared|vanished
+facilitará,future: will make easier,will|'ll|shall|going,had|would|facilitated|eased
+indicará,future: will indicate,will|'ll|shall|going,had|would|indicated|showed|pointed
+permitirá,future: will allow,will|'ll|shall|going,had|would|allowed|permitted|enabled
+visitará,future: will visit,will|'ll|shall|going,had|would|visited
+pôde,past: could,could|was able|were able|managed,can|can't|cannot|may
+março,noun: March,march,landmark|landmarks|milestone|milestones|mark|marks|frame
+faça,verb: do / make,do|make|does|makes,knife|knives|blade
+metrô,noun: subway,subway|metro|underground|tube,metre|metres|meter|meters
+maçãs,noun: apples,apple|apples,stretcher|stretchers|gurney|gurneys
+marés,noun: tides,tide|tides|tidal,seas|sea
+cristã,adjective: Christian,christian|christians|christianity,crest|crests|comb
+cristãs,adjective: Christian,christian|christians|christianity,crest|crests|comb
+secretária,noun: secretary,secretary,secretariat|office|department
+trançado,adjective: braided,braided|braid|braids|woven|plaited|interwoven,locked|lock|locks
+vívida,adjective: vivid,vivid|vividly|lively,lived|living
+ópera,noun: opera,opera|operas,operates|operate|operating
+contêm,verb: contain (3pl),contain|contains|containing|include|includes,tell|tells|count|counts
+público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+pública,adjective: public,public,publishes|publish|published
+república,noun: republic,republic,republishes|republish|republished
+polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+tráfego,noun: traffic,traffic,traffics|trafficked
+trânsito,noun: traffic / transit,traffic|transit,transits|transited
+experiência,noun: experience,experience|experiences|experienced,experiments|experimented|tries|tried|tests
+início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+veículo,noun: vehicle,vehicle|vehicles|car|craft,conveys|broadcasts|transmits|carries
+agência,noun: agency,agency|agencies,arranges|brokers|negotiates
+fotógrafo,noun: photographer,photographer|photographers,photographs|photographed
+líquido,adjective / noun: liquid,liquid|liquids|fluid|fluids|net,liquidates|liquidated|settles|settled
+médica,adjective / noun: medical / doctor,medical|doctor|doctors|physician|physicians|medicine,medicates|medicated|prescribes
+última,adjective: last,last|latest|final|ultimate|recent,finalizes|finalises|finalized|finalised|completes
+análise,noun: analysis,analysis|review,analyzes|analyzed
+crítica,noun / adjective: criticism / critical,criticism|criticisms|critical|critic|critics|critique|review,criticizes|criticises|criticized|criticised
+contínua,adjective: continuous,continuous|continual|continuing|ongoing|constant|steady,continues
+contínuo,adjective: continuous,continuous|continual|continuing|ongoing|constant|steady,continues
+contrário,adjective: contrary / opposite,contrary|opposite|against|unlike|reverse,contradicts|opposes|upsets|annoys
+estágio,noun: stage / internship,stage|stages|internship|phase,interns|interned
+negligência,noun: negligence,negligence|neglect|negligent,neglects|neglected
+privilégio,noun: privilege,privilege|privileged|privileges,favors|favours|favored|favoured
+pronúncia,noun: pronunciation,pronunciation|pronunciations|pronounced,pronounces
+anúncio,noun: announcement,announcement|announcements|ad|ads|advert|advertisement|notice,announces|announced
+capítulo,noun: chapter,chapter|chapters,capitulates|capitulated|surrenders|surrendered|yields
+clínica,noun / adjective: clinic / clinical,clinic|clinics|clinical,practises|practices|practiced|practised
+doméstico,adjective: domestic,domestic|household|home|house,domesticates|tames|tamed
+específico,adjective: specific,specific|specifically|particular,specifies|specified
+gerência,noun: management,management|manager|managers|managing,manages|managed
+matrícula,noun: enrolment,registration|enrollment|enrolment|license|licence|plate|tuition,enrolls|enrols|registers|registered|enrolled
+pacífica,adjective: peaceful,peaceful|peacefully|pacific|calm,pacifies|pacified|appeases
+prévia,adjective: prior,prior|previous|preview|preliminary|advance|beforehand,foresees|predicts|forecasts
+renúncia,noun: resignation,resignation|resign|resigned|waiver|renunciation,resigns|renounces|waives
+vítima,noun: victim,victim|victims,victimizes|victimises|victimized|victimised
+válido,adjective: valid,valid|validity,validates|validated
+íntima,adjective: intimate,intimate|intimately|close|private,summons|summoned|notifies|notified
+abandoná,infinitive: abandon,abandon|abandoning|leave|leaving,abandons|leaves
+acordá,infinitive: wake,wake|waking|awaken,wakes|awakens
+combatê,infinitive: fight,fight|fighting|combat|combating|tackle|tackling,fights|combats|tackles
+contactá,infinitive: contact,contact|contacting|reach,contacts|reaches
+encontrá,infinitive: find,find|finding|meet|meeting|locate,finds|meets|locates
+torná,infinitive: make,make|making|turn|render|become,makes|turns|renders|becomes

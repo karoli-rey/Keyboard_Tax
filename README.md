@@ -19,7 +19,7 @@ this changes the meaning, and whether the usual translation scores notice.
 flowchart LR
     S1["1 Load data"] --> S2["2 Label A / B"] --> R(["Native speaker check"]) --> S3["3 Damaged versions"]
     S3 --> S4["4 Translate"] --> S5["5 Score"] --> S6["6 Analyze"]
-    C(["Challenge set, by hand"]) --> S6
+    C(["Challenge set: draft + native speaker check"]) --> S6
 ```
 
 | Step | File | Owner | Writes |
@@ -27,11 +27,11 @@ flowchart LR
 | 1 | `data.py` | Coder 1 | `outputs/1_sentences.csv` |
 | 2 | `classify.py` | Coder 1 | `outputs/2_lexicon_auto.csv`, `outputs/2_letters.csv` |
 | review | by hand | native speaker | `data/lexicon.csv` |
-| challenge set | by hand | Researcher + native speaker | `data/challenge_set.csv` |
+| challenge set | `challenge.py`, then by hand | draft: Coder 2; check: native speaker | `data/challenge_set.csv` |
 | 3 | `versions.py` | Coder 1 | `outputs/3_versions.csv` |
 | 4 | `translate.py` | Coder 2 | `outputs/4_translations.csv` |
 | 5 | `score.py` | Coder 2 | `outputs/5_scores.csv`, `outputs/5_corpus_scores.csv` |
-| 6 | `analyze.py` | Coder 2 | `outputs/6_results/` |
+| 6 | `analyze.py` | Coder 2 | `outputs/6_results/` (tables, charts, `summary.txt`) |
 
 Each step reads the file the step before wrote. The columns of every file are fixed in
 `src/keyboard_tax/common.py`, and `tests/fixtures/` has a small example of each one, so any
@@ -83,7 +83,8 @@ src/keyboard_tax/
   versions.py    step 3  damaged versions
   translate.py   step 4  three translation systems
   score.py       step 5  BLEU, chrF, COMET
-  analyze.py     step 6  tables, charts, regression
+  challenge.py   draft of the challenge set (for step 6)
+  analyze.py     step 6  tables, charts, targeted check, hypotheses
 data/            data we create and release (CC BY-SA 4.0)
 tests/           tests, and example data in fixtures/
 literature/      literature review: one entry per paper (no PDFs)
