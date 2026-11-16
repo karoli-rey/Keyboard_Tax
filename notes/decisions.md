@@ -7,6 +7,7 @@
 - [x] Frequency threshold for rare Class B words (`min_zipf`)?
 - [x] How do we skip names? (decided 2026-11-01)
 - [ ] Which LLM, its exact prompt, and where it runs (GPU or API)? (proposed 2026-11-15, see the log; the team still has to agree)
+- [x] sacreBLEU signatures (run of 16 Nov): BLEU `nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0`, chrF `nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0`
 - [ ] Rule for the targeted check (who writes the patterns, who double-checks them)?
 - [ ] Roles: who is Researcher, Coder 1 (steps 1–3), Coder 2 (steps 4–6)?
 
@@ -58,3 +59,4 @@ One line per decision, with the reason. This becomes the Method section of the r
 | 2026-11-16 | `5_corpus_scores.csv` gets two new columns: `subset` ("all" or "both_classes") and `n` (number of sentences) | A-only, B-only and noise exist for only 422 sentences; comparing them with clean scores over all 1,012 sentences would mix two different sets of sentences | Olivia | proposed |
 | 2026-11-16 | Step 5 scores each distinct (clean source, translation, reference) case once; an empty translation counts as an empty text | Many versions get the same translation; the result is the same and the run is faster | Olivia | proposed |
 | 2026-11-16 | The LLM answered partly or fully in Chinese for 7 of its 3,254 distinct sentences (4 FLORES+ sentences, clean and stripped versions alike). We keep these answers unchanged and repeat the analysis without those 4 sentences | It is how the model behaves, not an effect of our damage; changing answers by hand would not be repeatable | Olivia | proposed |
+| 2026-11-16 | COMET runs in its own Python environment on Colab (`uv venv`, section 11 of the notebook) | COMET needs older helper packages that clash with what Colab preinstalls (TensorFlow, protobuf); a separate environment avoids touching them | Olivia | proposed |
