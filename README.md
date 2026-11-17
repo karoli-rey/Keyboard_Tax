@@ -26,8 +26,8 @@ flowchart LR
 |---|---|---|---|
 | 1 | `data.py` | Coder 1 | `outputs/1_sentences.csv` |
 | 2 | `classify.py` | Coder 1 | `outputs/2_lexicon_auto.csv`, `outputs/2_letters.csv` |
-| review | by hand | native speaker | `data/lexicon.csv` |
-| challenge set | `challenge.py`, then by hand | draft: Coder 2; check: native speaker | `data/challenge_set.csv` |
+| review | by hand | Coder 1 (native speaker) | `data/lexicon.csv` |
+| challenge set | `challenge.py`, then by hand | draft: Coder 2; check: Coder 1 (native speaker) | `data/challenge_set.csv` |
 | 3 | `versions.py` | Coder 1 | `outputs/3_versions.csv` |
 | 4 | `translate.py` | Coder 2 | `outputs/4_translations.csv` |
 | 5 | `score.py` | Coder 2 | `outputs/5_scores.csv`, `outputs/5_corpus_scores.csv` |
@@ -61,14 +61,14 @@ All settings (models, seed, thresholds) are in `config.yaml`.
 
 | Role | Name | Owns |
 |---|---|---|
-| Researcher | | `literature/`, `notes/dataset.md`, the challenge set, the decisions in `notes/decisions.md` |
-| Coder 1 | | Steps 1–3 |
-| Coder 2 | | Steps 4–6 |
+| Coder 1 | Thomas Schurter | Steps 1–3; review of the word list and of the challenge set as native speaker |
+| Coder 2 | Karen Olivia Reyes Mendoza | Steps 4–6; draft of the challenge set; `notes/dataset.md`; the entries in `literature/papers.md` |
+| Researcher | Lucia Ivan | Report structure (first draft of `report/outline.md`); the search topics in `literature/papers.md`; ideas for future work |
 
 - One branch per task, merged through a pull request that a teammate reviews.
 - Short commit messages that say what changed: `Add accent stripping`.
 - Changes to `classify.py` always get a second reader: a bug there changes the main result.
-- Every decision goes in `notes/decisions.md`; every use of an AI tool in `notes/ai_use.md`.
+- Every use of an AI tool goes in `notes/ai_use.md`.
 - The report is written in Overleaf; its plan is `report/outline.md`.
 - Files in `outputs/` are generated: never edit or commit them.
 
@@ -89,7 +89,7 @@ data/            data we create and release (CC BY-SA 4.0)
 tests/           tests, and example data in fixtures/
 literature/      literature review: one entry per paper (no PDFs)
 report/          report plan, section by section
-notes/           decisions, dataset notes, AI use, Thomas's notes and demos
+notes/           dataset notes, AI use, decisions up to 17 Nov, Thomas's notes and demos
 outputs/         created by the code, not committed
 ```
 
