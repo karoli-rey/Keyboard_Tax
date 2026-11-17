@@ -1,6 +1,10 @@
 # Decisions
 
-## Open questions (the Researcher answers these in week 1, the team agrees)
+The team agreed not to log every decision, so this file stops on 17 Nov. It stays as the
+record up to then; the report's method sections still draw on it. Rows marked "proposed" were
+never voted on.
+
+## Open questions (the team agrees on each answer)
 
 - [x] Which FLORES+ split do we report on?
 - [x] Which pt_BR dictionary (source, version, licence)?
@@ -9,7 +13,7 @@
 - [ ] Which LLM, its exact prompt, and where it runs (GPU or API)? (proposed 2026-11-15, see the log; the team still has to agree)
 - [x] sacreBLEU signatures (run of 16 Nov): BLEU `nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0`, chrF `nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0`
 - [x] Rule for the targeted check: Coder 2 drafts the patterns (`data/challenge_words.csv`), the native speaker checks every row of `data/challenge_set.csv` (proposed 2026-11-16, see the log)
-- [ ] Roles: who is Researcher, Coder 1 (steps 1–3), Coder 2 (steps 4–6)?
+- [x] Roles: Coder 1 Thomas, Coder 2 Olivia, Researcher Lucia; see the table in `README.md` for who did what (17 Nov)
 
 ## Questions for the lecturer
 

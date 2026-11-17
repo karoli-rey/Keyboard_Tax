@@ -10,7 +10,7 @@ Headings follow the template, so the graders find every required question.
 |---|---|---|---|---|
 | | Title, three authors, GitHub link, abstract | | Abstract: 4–5 sentences, written last | |
 | 1 | Introduction | 0.75 | Accent dropping in Portuguese; Class A (*coração → coracao*) and Class B (*têm → tem*); research questions; related work and the gap | `literature/` |
-| 2 | Data set | 0.5 | FLORES+ Portuguese → English: how it was built, split, metadata, why, alternatives | `notes/dataset.md` |
+| 2 | Data set | 0.5 | FLORES+ Portuguese → English: how it was built, split, metadata, why, alternatives | `notes/dataset.md` (filled in) |
 | 3 | Preprocessing | 1 | Accent stripping (Unicode NFD); Class A / B labels (dictionary + frequency, native-speaker check, precision); the damaged versions | steps 1–3 |
 | 4 | Translation systems | 0.5 | Replaces "Model training": we train nothing. NLLB-200, Opus-MT, one LLM, and why these three | step 4 |
 | 5 | Evaluation | 1.5 | BLEU, chrF, COMET; targeted check on the challenge set; regression; results table, one figure, two or three error examples | steps 5–6 |
@@ -26,6 +26,9 @@ Headings follow the template, so the graders find every required question.
 - Write "we test whether", not "we prove". "BLEU barely notices" and "Class A is cheap" are
   hypotheses until our results say so.
 - Keep examples to Portuguese.
+- Motivation (Lucy's notes): a Class B loss is a silent failure. The translation reads fluent
+  and grammatical, but means something else; that is why fluent-looking scores can miss it.
+- Related work and the gap: `literature/papers.md` (first paragraph).
 
 **3 Preprocessing**
 - Labels come from the Hunspell dictionary plus word frequency, not word frequency alone
@@ -44,3 +47,5 @@ Headings follow the template, so the graders find every required question.
   large models may recover the meaning from context.
 - Future work (from Lucy's notes): restoring accents before translation; training on accent-free
   text; Romanian and Spanish; a collection of real accent-free messages.
+- Practical takeaway (Lucy's notes): apps that translate casual text should restore accents
+  first; our results say where it matters (meaning pairs and future verbs, see section 5).
