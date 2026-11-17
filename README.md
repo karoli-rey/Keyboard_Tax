@@ -56,9 +56,9 @@ All settings (models, seed, thresholds) are in `config.yaml`.
 
 | Role | Name | Owns |
 |---|---|---|
-| Researcher | | `literature/`, `notes/dataset.md`, the challenge set, the decisions in `notes/decisions.md` |
-| Coder 1 | | Steps 1–3 |
-| Coder 2 | | Steps 4–6 |
+| Researcher | Lucia Ivan | `literature/`, `notes/dataset.md` |
+| Coder 1 | Thomas Schurter | Steps 1–3 |the challenge set
+| Coder 2 | Karen Olivia Reyes| Steps 4–6 | the challenge set
 
 - One branch per task, merged through a pull request that a teammate reviews.
 - Short commit messages that say what changed: `Add accent stripping`.
