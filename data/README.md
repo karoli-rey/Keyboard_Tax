@@ -27,8 +27,8 @@ Columns: `word, stripped, label, zipf, native_checked, lost, note` (example: `te
 
 One row per word: the right reading, and English words for the right and the wrong reading,
 separated by `|` (example: `país`, `noun: country`, `country|nation|...`, `parents|parent`).
-73 words. Written by Coder 2 with Claude (see `notes/ai_use.md`); checked by the native speaker.
-Left out on purpose: *é, está, à, às, têm, nós, dá, pôr*, and nouns whose verb reading has the
+72 words. Written by Coder 2 with Claude (see `notes/ai_use.md`); checked by the native speaker.
+Left out of the draft on purpose: *é, está, à, às, têm, nós, dá, pôr*, and nouns whose verb reading has the
 same English form (*dúvida*: doubt / doubts). Their difference is grammar ("is" or "and"), and
 such words are in almost every English sentence, so a word match cannot decide.
 
@@ -45,7 +45,10 @@ such words are in almost every English sentence, so a word match cannot decide.
    deletes rows that do not work and fixes patterns in this file. The script never overwrites
    it without `--force`.
 
-Draft of 16 Nov: 159 rows, 140 sentences, 67 words. Step 6 checks each system's translation
+Draft of 16 Nov: 159 rows. Review file of 16 Nov (from Thomas): 136 kept, 13 fixed, 10 deleted,
+38 added by hand, among them a few *é, está, têm, à, às* sentences with patterns written for that
+sentence. Now 187 rows, 170 sentences, 74 words; every row passes rule 2, and no word occurs twice
+in its sentence. Step 6 checks each system's translation
 against it: "right" if the English has a right-reading word and no wrong one, "wrong" for the
 opposite, "unclear" otherwise.
 

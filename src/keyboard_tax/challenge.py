@@ -17,7 +17,7 @@ How it works:
        outputs/6_challenge_review.csv and edits data/challenge_set.csv: delete rows that do
        not work, fix patterns. The file is never overwritten without --force.
 
-Left out on purpose: é, está, à, às, têm, nós, dá, pôr and words whose two readings have
+Left out of the draft on purpose: é, está, à, às, têm, nós, dá, pôr and words whose two readings have
 the same English form (dúvida "doubt / doubts"). Their difference is grammar ("is" versus
 "and"), and such words appear in almost every English sentence, so a word match cannot
 decide. The COMET drop covers them.
