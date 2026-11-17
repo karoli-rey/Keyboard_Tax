@@ -38,6 +38,12 @@ Each step reads the file the step before wrote. The columns of every file are fi
 step can be built before the previous step is finished. The to-do list for each step is at
 the top of its file.
 
+## Results
+
+Open **`results.ipynb`**: the idea, every result with its chart and a short explanation.
+It runs in a few seconds on any laptop (no GPU, no model, no dataset login), and its outputs
+are stored in the file, so it can also just be read.
+
 ## Run it
 
 ```bash
@@ -54,6 +60,8 @@ Steps 4 and 5 need a GPU for the full data: open `scripts/colab_gpu_run.ipynb` i
 (about one hour in all). Results come back as a zip; unzip it into `outputs/`.
 On a laptop, try step 4 on the example data with
 `python -m keyboard_tax.translate --fixtures --systems opus_mt`.
+
+Step 6 runs on a laptop: `python -m keyboard_tax.analyze --save-results` (also refreshes `results/`).
 
 All settings (models, seed, thresholds) are in `config.yaml`.
 
@@ -89,8 +97,10 @@ data/            data we create and release (CC BY-SA 4.0)
 tests/           tests, and example data in fixtures/
 literature/      literature review: one entry per paper (no PDFs)
 report/          report plan, section by section
-notes/           dataset notes, AI use, decisions up to 17 Nov, Thomas's notes and demos
-outputs/         created by the code, not committed
+results.ipynb    all results with charts and explanations: start here
+results/         the scores the notebook reads (numbers only, no sentences)
+notes/           how each part was built (steps 1-3, steps 4-6), dataset notes, AI use, demos
+outputs/         created by the code, not committed (contains FLORES+ sentences)
 ```
 
 ## License

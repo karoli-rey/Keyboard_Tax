@@ -1,5 +1,5 @@
 # All experiment settings. The code reads everything from here.
-# TODO values are decided by the team (see notes/decisions.md), then filled in here.
+# The reasons for each value are in notes/ (one file for steps 1 to 3, one for steps 4 to 6).
 
 source_language: por_Latn    # Portuguese: the text we remove accents from
 target_language: eng_Latn    # English: the translations and the reference answers
@@ -9,7 +9,7 @@ seed: 0                      # fixes every random choice, so runs repeat exactly
 dictionary: data/raw/pt_BR   # step 2: pt_BR Hunspell files without .dic/.aff
                              #   (download with scripts/get_dictionary.sh)
 min_zipf: 99                 # step 2: Class B words rarer than this go to the native speaker
-                             #   99: every Class B word goes to the native speaker, see decisions.md
+                             #   99: every Class B word goes to the native speaker, see notes/thomas_steps_1-3_notes.md
 review_sample: 50            # step 2: extra random words the native speaker checks
 normalize_unicode: {}        # step 2: characters to unify first (only needed for Romanian)
 
@@ -23,7 +23,7 @@ versions:                    # step 3
 systems:                     # step 4: exact model names
   nllb: facebook/nllb-200-distilled-600M
   opus_mt: Helsinki-NLP/opus-mt-ROMANCE-en    # there is no official pt-en model
-  llm: Qwen/Qwen2.5-7B-Instruct               # proposed, see notes/decisions.md
+  llm: Qwen/Qwen2.5-7B-Instruct               # why: notes/olivia_steps_4-6_notes.md
 llm_4bit: true               # step 4: load the LLM in 4-bit, so it fits a free Colab GPU
 llm_prompt: |                # step 4: {text} is replaced by the Portuguese sentence
   Translate the following Portuguese sentence into English. Output only the English translation, with no notes or explanations.

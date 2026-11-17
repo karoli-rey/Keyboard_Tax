@@ -38,7 +38,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from keyboard_tax.common import RESULTS_DIR, read_table
+from keyboard_tax.common import RESULTS_DIR, ROOT, read_table
+
+SAVED_RESULTS_DIR = ROOT / "results"
 
 METRICS = ["comet", "chrf"]
 MAIN_METRIC = "comet"
@@ -696,9 +698,41 @@ def run(
     return tables
 
 
+SAVED_TABLES = [
+    "targeted_check", "targeted_summary", "targeted_by_loss", "bleu_vs_targeted",
+    "contrasts_without_e", "contrasts_without_other_script",
+]
+
+
+def save_results(
+    tables: dict[str, pd.DataFrame],
+    scores: pd.DataFrame,
+    versions: pd.DataFrame,
+    corpus_scores: pd.DataFrame,
+    folder: Path,
+) -> None:
+    """Write the tables that results.ipynb needs to results/ (committed).
+
+    Numbers only, no sentences: FLORES+ asks that its text stays behind its login, so the
+    notebook can be run by anyone without downloading the data or a model.
+    """
+    folder.mkdir(parents=True, exist_ok=True)
+    scores.to_csv(folder / "scores.csv", index=False)
+    corpus_scores.to_csv(folder / "corpus_scores.csv", index=False)
+    versions.drop(columns="src").to_csv(folder / "version_counts.csv", index=False)
+    for name in SAVED_TABLES:
+        if name in tables:
+            tables[name].to_csv(folder / f"{name}.csv", index=False)
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Step 6: analyze")
     parser.add_argument("--fixtures", action="store_true", help="use tests/fixtures as input")
+    parser.add_argument(
+        "--save-results",
+        action="store_true",
+        help="also write the tables for results.ipynb to results/ (numbers only, no sentences)",
+    )
     args = parser.parse_args(argv)
     scores = read_table("scores", fixtures=args.fixtures)
     translations = read_table("translations", fixtures=args.fixtures)
@@ -711,8 +745,12 @@ def main(argv: list[str] | None = None) -> None:
         print("No data/challenge_set.csv yet: the targeted check is skipped.")
     lexicon = read_table("lexicon", fixtures=args.fixtures)
     results_dir = RESULTS_DIR if not args.fixtures else RESULTS_DIR / "fixtures"
-    run(scores, translations, versions, sentences, challenge_set, results_dir, lexicon)
+    tables = run(scores, translations, versions, sentences, challenge_set, results_dir, lexicon)
     print((results_dir / "summary.txt").read_text(encoding="utf-8"))
+    if args.save_results:
+        corpus_scores = read_table("corpus_scores", fixtures=args.fixtures)
+        save_results(tables, scores, versions, corpus_scores, SAVED_RESULTS_DIR)
+        print("Wrote the tables for results.ipynb to", SAVED_RESULTS_DIR)
     print("Wrote results to", results_dir)
 
 

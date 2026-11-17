@@ -1,0 +1,55 @@
+loss,system,version,n,right,wrong,unclear,accuracy
+article,llm,b_only,6,6,0,0,1.0
+article,llm,clean,6,6,0,0,1.0
+article,llm,stripped_100,6,6,0,0,1.0
+article,nllb,b_only,6,6,0,0,1.0
+article,nllb,clean,6,6,0,0,1.0
+article,nllb,stripped_100,6,6,0,0,1.0
+article,opus_mt,b_only,6,6,0,0,1.0
+article,opus_mt,clean,6,6,0,0,1.0
+article,opus_mt,stripped_100,6,6,0,0,1.0
+meaning,llm,b_only,46,43,0,3,0.9347826086956522
+meaning,llm,clean,55,54,0,1,0.9818181818181818
+meaning,llm,stripped_100,55,52,0,3,0.9454545454545454
+meaning,nllb,b_only,46,34,4,8,0.7391304347826086
+meaning,nllb,clean,55,52,0,3,0.9454545454545454
+meaning,nllb,stripped_100,55,42,6,7,0.7636363636363637
+meaning,opus_mt,b_only,46,25,19,2,0.5434782608695652
+meaning,opus_mt,clean,55,55,0,0,1.0
+meaning,opus_mt,stripped_100,55,28,23,4,0.509090909090909
+number,llm,b_only,11,10,0,1,0.9090909090909091
+number,llm,clean,14,13,0,1,0.9285714285714286
+number,llm,stripped_100,14,14,0,0,1.0
+number,nllb,b_only,11,10,0,1,0.9090909090909091
+number,nllb,clean,14,13,0,1,0.9285714285714286
+number,nllb,stripped_100,14,13,0,1,0.9285714285714286
+number,opus_mt,b_only,11,11,0,0,1.0
+number,opus_mt,clean,14,14,0,0,1.0
+number,opus_mt,stripped_100,14,14,0,0,1.0
+tense,llm,b_only,14,5,8,1,0.35714285714285715
+tense,llm,clean,15,15,0,0,1.0
+tense,llm,stripped_100,15,5,9,1,0.3333333333333333
+tense,nllb,b_only,14,3,7,4,0.21428571428571427
+tense,nllb,clean,15,14,0,1,0.9333333333333333
+tense,nllb,stripped_100,15,5,6,4,0.3333333333333333
+tense,opus_mt,b_only,14,2,12,0,0.14285714285714285
+tense,opus_mt,clean,15,14,0,1,0.9333333333333333
+tense,opus_mt,stripped_100,15,1,14,0,0.06666666666666667
+verb form,llm,b_only,3,3,0,0,1.0
+verb form,llm,clean,4,4,0,0,1.0
+verb form,llm,stripped_100,4,4,0,0,1.0
+verb form,nllb,b_only,3,3,0,0,1.0
+verb form,nllb,clean,4,4,0,0,1.0
+verb form,nllb,stripped_100,4,4,0,0,1.0
+verb form,opus_mt,b_only,3,3,0,0,1.0
+verb form,opus_mt,clean,4,4,0,0,1.0
+verb form,opus_mt,stripped_100,4,4,0,0,1.0
+word class,llm,b_only,78,76,0,2,0.9743589743589743
+word class,llm,clean,93,89,0,4,0.956989247311828
+word class,llm,stripped_100,93,89,0,4,0.956989247311828
+word class,nllb,b_only,78,71,1,6,0.9102564102564102
+word class,nllb,clean,93,89,0,4,0.956989247311828
+word class,nllb,stripped_100,93,86,1,6,0.9247311827956989
+word class,opus_mt,b_only,78,73,3,2,0.9358974358974359
+word class,opus_mt,clean,93,93,0,0,1.0
+word class,opus_mt,stripped_100,93,88,3,2,0.946236559139785

@@ -66,7 +66,7 @@ their own token; it never goes into the code or the repository.
 |---|---|
 | Europarl, OpenSubtitles and other OPUS corpora | Opus-MT is trained on OPUS data, so it may have seen the test sentences |
 | Tatoeba | Very short sentences with little context; context is what could rescue a Class B word |
-| Real messages typed without accents (social media) | No English reference, and collecting them raises privacy and terms-of-use questions (moved to future work, see `notes/decisions.md`) |
+| Real messages typed without accents (social media) | No English reference, and collecting them raises privacy and terms-of-use questions (moved to future work) |
 
 **Limits of this choice** (for report section 6)
 - FLORES+ is formal text (news, travel guides, children's encyclopedia). People drop accents
@@ -91,7 +91,7 @@ without accents (*musica* has Zipf 4.0), so we do not use it to decide Class B: 
 speaker reviews every Class B word (`min_zipf: 99`).
 
 **Translation and scoring models**
-See `config.yaml` and `notes/decisions.md`: NLLB-200 distilled 600M, Opus-MT ROMANCE-en,
+See `config.yaml` and `notes/olivia_steps_4-6_notes.md`: NLLB-200 distilled 600M, Opus-MT ROMANCE-en,
 Qwen2.5-7B-Instruct, COMET `wmt22-comet-da`.
 
 ## Sources
