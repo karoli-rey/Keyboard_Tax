@@ -168,7 +168,7 @@ def check_can_run(system: str, config: dict) -> None:
         raise ValueError(f"Unknown system '{system}'. Known: {', '.join(config['systems'])}.")
     reason = undecided(system, config)
     if reason:
-        raise ValueError(f"Cannot run '{system}': {reason}. See notes/decisions.md.")
+        raise ValueError(f"Cannot run '{system}': {reason}. Set it in config.yaml.")
 
 
 def get_translator(system: str, config: dict) -> Translator:
