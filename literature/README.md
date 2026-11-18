@@ -5,7 +5,7 @@ It becomes the related-work part of the report's Introduction (about half a page
 
 | File | What goes in it |
 |---|---|
-| `papers.md` | One short entry per paper we read, plus topics still to search |
+| `papers.md` | One short entry per paper we read |
 
 ## Rules
 
@@ -14,8 +14,7 @@ It becomes the related-work part of the report's Introduction (about half a page
 - No PDFs in this folder. The repository is public and most papers are copyrighted:
   link to the ACL Anthology, arXiv or the publisher instead.
 - BibTeX goes straight into Overleaf (the "Cite" button on the ACL Anthology or arXiv page).
-- Read the paper itself, not a summary of it. If an AI tool helped you find or summarise
-  a paper, log it in `notes/ai_use.md`.
+- Read the paper itself, not a summary of it.
 
 ## The question we want to answer
 

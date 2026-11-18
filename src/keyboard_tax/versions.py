@@ -10,14 +10,14 @@ Versions, one row each per sentence:
     a_only        only Class A words stripped
     b_only        only Class B words stripped, same number of words as a_only
     noise         keyboard typos, same number of changed letters as b_only
-Should tier:
+Optional, switched off in config.yaml (not used in our results):
     stripped_25, stripped_50, stripped_75   a share of the accented words, nested
                                             (every word in _25 is also in _50 and _100)
 
 n_a, n_b: how many Class A / Class B words were stripped in this version.
 n_chars:  how many letters differ from the clean sentence.
 
-To do:
+How it works:
     1. For each sentence, find its Class A and Class B words using the lexicon.
     2. k = min(number of A words, number of B words).
        If k == 0, write only clean and stripped_100 for this sentence.
@@ -28,7 +28,7 @@ To do:
        on the keyboard. Redo any typo that creates a real word, so the noise version
        contains no new ambiguity.
     5. Strip rates: shuffle the sentence's accented words once with the seed, then strip
-       the first 25%, 50% or 75% of that order.
+       the first 25%, 50% or 75% of that order. Switched off in config.yaml (not used).
     6. Write the table with write_table(df, "versions").
 
 Thomas's demo in notes/demos/perturb_demo.py shows a first version of steps 4 and 5.

@@ -4,7 +4,7 @@ Owner:  Coder 1
 Input:  FLORES+ on Hugging Face (needs a login and accepted terms)
 Output: outputs/1_sentences.csv  (columns: sent_id, pt, en)
 
-To do:
+How it works:
     1. Load the source (Portuguese) and target (English) sentences for the split in
        config.yaml. FLORES+ has the same sentences in every language, in the same order.
     2. Put them side by side, one row per sentence, with a sent_id starting at 0.

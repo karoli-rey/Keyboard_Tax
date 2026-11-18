@@ -3,8 +3,8 @@
 Data we create and release with the project. This file is also its datasheet:
 what each file contains, how it was made, and its licence.
 
-**Licence:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), because it
-contains sentences from FLORES+ (also CC BY-SA 4.0). The code has its own licence (MIT).
+**Licence:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), because it is
+derived from FLORES+ (also CC BY-SA 4.0). It holds words and sentence numbers, not the sentences. The code has its own licence (MIT).
 
 ## `lexicon.csv`: the reviewed Class A / B word list
 
@@ -23,10 +23,34 @@ contains sentences from FLORES+ (also CC BY-SA 4.0). The code has its own licenc
 
 Columns: `word, stripped, label, zipf, native_checked, lost, note` (example: `tests/fixtures/lexicon.csv`).
 
+## `challenge_words.csv`: Class B words whose English really changes
+
+One row per word: the right reading, and English words for the right and the wrong reading,
+separated by `|` (example: `país`, `noun: country`, `country|nation|...`, `parents|parent`).
+72 words. Written by Coder 2; checked by the native speaker.
+Left out of the draft on purpose: *é, está, à, às, têm, nós, dá, pôr*, and nouns whose verb reading has the
+same English form (*dúvida*: doubt / doubts). Their difference is grammar ("is" or "and"), and
+such words are in almost every English sentence, so a word match cannot decide.
+
 ## `challenge_set.csv`: sentences where a lost accent changes the English meaning
 
-Made by the Researcher with the native speaker. Only include words where the English
-really changes. Step 6 checks each system's translation against it.
+`python -m keyboard_tax.challenge` drafts it from `challenge_words.csv`:
+
+1. A sentence is taken if its clean Portuguese contains the word and the word lost its accent
+   in at least one damaged version.
+2. It is kept only if the English reference contains a right-reading word and no wrong-reading
+   word, so the check can tell the two readings apart.
+3. The native speaker runs the script again (it then only writes the review sheet), reads
+   `outputs/6_challenge_review.csv` (each row with both sentences),
+   deletes rows that do not work and fixes patterns in this file. The script never overwrites
+   it without `--force`.
+
+Draft of 16 Nov: 159 rows. Review file of 16 Nov (from Thomas): 136 kept, 13 fixed, 10 deleted,
+38 added by hand, among them a few *é, está, têm, à, às* sentences with patterns written for that
+sentence. Now 187 rows, 170 sentences, 74 words; every row passes rule 2, and no word occurs twice
+in its sentence. Step 6 checks each system's translation
+against it: "right" if the English has a right-reading word and no wrong one, "wrong" for the
+opposite, "unclear" otherwise.
 
 | Column | Example |
 |---|---|
