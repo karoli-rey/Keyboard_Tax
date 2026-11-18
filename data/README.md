@@ -3,8 +3,8 @@
 Data we create and release with the project. This file is also its datasheet:
 what each file contains, how it was made, and its licence.
 
-**Licence:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), because it
-contains sentences from FLORES+ (also CC BY-SA 4.0). The code has its own licence (MIT).
+**Licence:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), because it is
+derived from FLORES+ (also CC BY-SA 4.0). It holds words and sentence numbers, not the sentences. The code has its own licence (MIT).
 
 ## `lexicon.csv`: the reviewed Class A / B word list
 
@@ -27,7 +27,7 @@ Columns: `word, stripped, label, zipf, native_checked, lost, note` (example: `te
 
 One row per word: the right reading, and English words for the right and the wrong reading,
 separated by `|` (example: `país`, `noun: country`, `country|nation|...`, `parents|parent`).
-72 words. Written by Coder 2 with Claude (see `notes/ai_use.md`); checked by the native speaker.
+72 words. Written by Coder 2; checked by the native speaker.
 Left out of the draft on purpose: *é, está, à, às, têm, nós, dá, pôr*, and nouns whose verb reading has the
 same English form (*dúvida*: doubt / doubts). Their difference is grammar ("is" or "and"), and
 such words are in almost every English sentence, so a word match cannot decide.

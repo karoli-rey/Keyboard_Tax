@@ -35,8 +35,8 @@ flowchart LR
 
 Each step reads the file the step before wrote. The columns of every file are fixed in
 `src/keyboard_tax/common.py`, and `tests/fixtures/` has a small example of each one, so any
-step can be built before the previous step is finished. The to-do list for each step is at
-the top of its file.
+step can be built before the previous step is finished. Each file starts with a short
+description of what the step does.
 
 ## Results
 
@@ -77,7 +77,7 @@ All settings (models, seed, thresholds) are in `config.yaml`.
 - One branch per task, merged through a pull request that a teammate reviews.
 - Short commit messages that say what changed: `Add accent stripping`.
 - Changes to `classify.py` always get a second reader: a bug there changes the main result.
-- Every use of an AI tool goes in `notes/ai_use.md`.
+- The use of AI tools is declared in the report.
 - The report is written in Overleaf; its plan is `report/outline.md`.
 - Files in `outputs/` are generated: never edit or commit them.
 
@@ -100,7 +100,7 @@ literature/      literature review: one entry per paper (no PDFs)
 report/          report plan, section by section
 results.ipynb    all results with charts and explanations: start here
 results/         the scores the notebook reads (numbers only, no sentences)
-notes/           how each part was built (steps 1-3, steps 4-6), dataset notes, AI use, demos
+notes/           how each part was built (steps 1-3, steps 4-6), dataset notes, demos
 outputs/         created by the code, not committed (contains FLORES+ sentences)
 ```
 

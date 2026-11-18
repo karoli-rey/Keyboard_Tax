@@ -1,6 +1,6 @@
 """Draft the challenge set: sentences where a lost accent changes the English meaning.
 
-Owner:  Coder 2 (draft, see notes/ai_use.md) and Coder 1 (check as native speaker).
+Owner:  Coder 2 (draft) and Coder 1 (check as native speaker).
 Input:  data/challenge_words.csv  one row per Class B word whose English really changes:
                                   the right reading, and English words for each reading
         outputs/1_sentences.csv, outputs/3_versions.csv

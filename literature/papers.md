@@ -24,7 +24,7 @@ whether the damaged word is still a real word.
 
 ## Entries
 
-Written on 17 Nov from the papers' own pages with Claude's help (see `notes/ai_use.md`).
+Written on 17 Nov from the papers' own pages.
 Before citing a paper in the report, read the passage you cite.
 
 **Paper:** Chen, Adebara and Abdul-Mageed (NAACL 2024), Interplay of Machine Translation, Diacritics, and Diacritization. https://aclanthology.org/2024.naacl-long.420/

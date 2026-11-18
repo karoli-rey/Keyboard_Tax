@@ -14,7 +14,7 @@ Steps 4 to 6 are in `olivia_steps_4-6_notes.md`.
 | 2 | COMET 0.89 → 0.61 in the example | Illustrative, as the notes say. Real drops are far smaller: 0.003 to 0.022 on average |
 | 3 | FLORES-200 as one text file per language; "Wikipedia articles and news" | FLORES+ from Hugging Face (`openlanguagedata/flores_plus`, gated). Sources are Wikinews, Wikijunior and Wikivoyage. The variety is Brazilian Portuguese. See `dataset.md` |
 | 3 | Split `devtest`, 1,012 sentences | Same |
-| 4 | Versions `drop-25`, `drop-50`, `drop-100`, `class_a_only`, `class_b_only`, `random_matched` | Five versions: `clean`, `stripped_100`, `a_only`, `b_only`, `noise`. The 25 / 50 / 75% rates were not built |
+| 4 | Versions `drop-25`, `drop-50`, `drop-100`, `class_a_only`, `class_b_only`, `random_matched` | Five versions: `clean`, `stripped_100`, `a_only`, `b_only`, `noise`. The 25 / 50 / 75% rates are in `versions.py` but switched off in `config.yaml`, so they were not translated |
 | 4 | A-only and B-only cannot be matched per sentence | They are matched: both strip k = min(#A, #B) words, preferring words with one accent. 422 sentences have both classes; 1.27 words are stripped on average |
 | 4 | Noise: 8 random letters, as many as `drop-100` | Noise: neighbouring-key typos in words without accents, as many letters as `b_only`, redone if the typo is a real word |
 | 4 | "The model copes better with noise than with Class B" | The opposite: typos cost about 2.5 times more than Class B (see `results.ipynb`) |
@@ -23,7 +23,7 @@ Steps 4 to 6 are in `olivia_steps_4-6_notes.md`.
 | 6 | Class B if the stripped form is in the dictionary above a frequency threshold; only rare words are reviewed | No frequency cut (`min_zipf: 99`): wordfreq also counts text typed without accents (*musica* has Zipf 4.0). Thomas reviewed all 224 automatic Class B words and 50 sampled Class A words |
 | 6 | (no rule yet for the review) | A word is Class B only if its stripped form is used in normal written Brazilian Portuguese. Rare or archaic verb forms, *tu* forms, abbreviations, prefixes and foreign words count as Class A. Result: 98 of 224 stay Class B, 126 become Class A; all 50 sampled Class A words stay A. Word list: 1,144 words (1,046 A, 98 B) |
 | 6 | (names not covered) | A name is skipped only if it never occurs lowercase and occurs capitalized away from a sentence start |
-| 6 | Review by the native speaker alone | Two passes: Claude suggested labels for the 274 review words, then Thomas checked each one (`notes/ai_use.md`) |
+| 6 | Review by the native speaker alone | Two passes: Claude suggested labels for the 274 review words, then Thomas checked each one |
 | 6 | Three releases under CC-BY | Two releases, the word list and the challenge set, under CC BY-SA 4.0 (FLORES+ is CC BY-SA). The collection of real messages moved to future work |
 | 6 | Challenge set: about 250 sentences per language, LLM proposes, report agreement | 187 items for Portuguese. Drafted with Claude (not the LLM we evaluate) and reviewed: of 159 draft rows 136 kept, 13 fixed, 10 deleted, 38 added. No kappa was computed |
 | 7 | Dictionary from LibreOffice, asked through spylls, version pinned | Same: pt_BR (VERO 3.2, LGPLv3 / MPL), fixed commit in `scripts/get_dictionary.sh`, downloaded and never committed; `spylls` 0.1.7 |
