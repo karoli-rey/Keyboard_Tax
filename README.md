@@ -72,37 +72,44 @@ All settings (models, seed, thresholds) are in `config.yaml`.
 |---|---|---|
 | Coder 1 | Thomas Schurter | Steps 1–3; review of the word list and of the challenge set as native speaker |
 | Coder 2 | Karen Olivia Reyes Mendoza | Steps 4–6; draft of the challenge set; `notes/dataset.md`; the entries in `literature/papers.md` |
-| Researcher | Lucia Ivan | Report structure (first draft of `report/outline.md`); the search topics in `literature/papers.md`; ideas for future work |
+| Researcher | Lucia Ivan | Report structure; ideas for the introduction and for future work |
 
 - One branch per task, merged through a pull request that a teammate reviews.
 - Short commit messages that say what changed: `Add accent stripping`.
 - Changes to `classify.py` always get a second reader: a bug there changes the main result.
 - The use of AI tools is declared in the report.
-- The report is written in Overleaf; its plan is `report/outline.md`.
 - Files in `outputs/` are generated: never edit or commit them.
 
 ## Project map
 
 ```
-config.yaml      all settings
-src/keyboard_tax/
-  common.py      shared helpers: settings, file names and columns, accent stripping
-  data.py        step 1  load FLORES+
-  classify.py    step 2  label Class A / B
-  versions.py    step 3  damaged versions
-  translate.py   step 4  three translation systems
-  score.py       step 5  BLEU, chrF, COMET
-  challenge.py   draft of the challenge set (for step 6)
-  analyze.py     step 6  tables, charts, targeted check, hypotheses
-data/            data we create and release (CC BY-SA 4.0)
-tests/           tests, and example data in fixtures/
-literature/      literature review: one entry per paper (no PDFs)
-report/          report plan, section by section
-results.ipynb    all results with charts and explanations: start here
-results/         the scores the notebook reads (numbers only, no sentences)
-notes/           how each part was built (steps 1-3, steps 4-6), dataset notes, demos
-outputs/         created by the code, not committed (contains FLORES+ sentences)
+results.ipynb        all results with charts and explanations: start here
+results/             the scores the notebook reads (numbers only, no sentences)
+config.yaml          all settings: models, seed, prompt, versions
+pyproject.toml       the package and its dependencies
+src/keyboard_tax/    the pipeline, one file per step
+  common.py          shared helpers: settings, file names and columns, accent stripping
+  data.py            step 1  load FLORES+
+  classify.py        step 2  label Class A / B
+  versions.py        step 3  damaged versions
+  translate.py       step 4  three translation systems
+  score.py           step 5  BLEU, chrF, COMET
+  challenge.py       draft of the challenge set (used in step 6)
+  analyze.py         step 6  tables, charts, targeted check, hypotheses
+data/                what we release (CC BY-SA 4.0): word list and challenge set;
+                     data/README.md is their datasheet
+scripts/
+  colab_gpu_run.ipynb  steps 4 and 5 on a free Colab GPU
+  get_dictionary.sh    downloads the pt_BR dictionary for step 2
+tests/               tests (pytest), with a small example of every table in fixtures/
+literature/          related work: one short entry per paper (no PDFs)
+notes/               how it was built: dataset.md, thomas_steps_1-3_notes.md,
+                     olivia_steps_4-6_notes.md, and Thomas's first demos in demos/
+.github/             runs the tests on every push; pull request template
+outputs/             created by the code, never committed (holds FLORES+ sentences)
 ```
+
+The report itself is written in Overleaf and handed in as a PDF; it is not part of this repository.
 
 ## License
 

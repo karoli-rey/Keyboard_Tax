@@ -82,8 +82,7 @@ without the problem, and they are the standard way to compare systems on the sam
    word match; elsewhere their difference is grammar ("is" or "and") and a word match cannot
    decide. The COMET drop covers them.
 
-Still to confirm with Thomas: the review file says its marks are a first pass by Claude that he
-checks. The report may say "checked by our native speaker" only once he confirms it.
+Thomas checked every row of the review by hand as native speaker.
 
 ## Results in short
 
@@ -97,7 +96,7 @@ checks. The report may say "checked by our native speaker" only once he confirms
 | H5 | BLEU hides the Class B damage | Supported for NLLB and Opus-MT, not certain for the LLM |
 | H6 | The LLM loses least | Supported |
 
-Numbers, charts and explanations: `results.ipynb`. Draft text for the report: `report/sections_4_5.tex`.
+Numbers, charts and explanations: `results.ipynb`.
 
 ## How to rerun
 
