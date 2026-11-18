@@ -5,7 +5,7 @@ It becomes the related-work part of the report's Introduction (about half a page
 
 | File | What goes in it |
 |---|---|
-| `papers.md` | One short entry per paper we read, plus topics still to search |
+| `papers.md` | One short entry per paper we read |
 
 ## Rules
 
