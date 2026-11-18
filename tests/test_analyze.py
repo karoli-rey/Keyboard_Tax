@@ -237,3 +237,12 @@ def test_run_writes_every_table_and_chart(tmp_path):
     run(scores, translations, versions, sentences, None, tmp_path / "big")
     assert (tmp_path / "big" / "chart_drops.png").stat().st_size > 0
     assert (tmp_path / "big" / "chart_regression.png").stat().st_size > 0
+
+
+def test_wilson_interval_stays_between_0_and_1_and_contains_the_share():
+    from keyboard_tax.analyze import wilson_interval
+
+    low, high = wilson_interval(pd.Series([186, 141, 0]), pd.Series([187, 187, 10]))
+    assert (low >= 0).all() and (high <= 1).all()
+    assert low[0] < 186 / 187 < high[0]
+    assert round(low[1], 3) == 0.688 and round(high[1], 3) == 0.810

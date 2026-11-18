@@ -471,6 +471,7 @@ def hypothesis_table(
 # ---------------------------------------------------------------- charts
 
 SYSTEM_COLORS = {"nllb": "#1f77b4", "opus_mt": "#ff7f0e", "llm": "#2ca02c"}
+SYSTEM_NAMES = {"nllb": "NLLB", "opus_mt": "Opus-MT", "llm": "LLM (Qwen2.5)"}
 VERSION_LABELS = {
     "clean": "clean",
     "stripped_100": "all removed",
@@ -507,7 +508,8 @@ def chart_drops(drops: pd.DataFrame, path: Path) -> None:
              rows[f"{MAIN_METRIC}_high"] - rows[f"{MAIN_METRIC}_drop"]]
         )
         ax.bar(
-            x, rows[f"{MAIN_METRIC}_drop"], width, yerr=errors, capsize=3, label=system,
+            x, rows[f"{MAIN_METRIC}_drop"], width, yerr=errors, capsize=3,
+            label=SYSTEM_NAMES.get(system, system),
             color=SYSTEM_COLORS.get(system),
         )
     ax.set_xticks(np.arange(len(DAMAGED)) + width * (len(systems) - 1) / 2)
@@ -539,7 +541,8 @@ def chart_regression(fit: pd.DataFrame, path: Path) -> None:
         ax.errorbar(
             x, rows["estimate"],
             yerr=[rows["estimate"] - rows["low"], rows["high"] - rows["estimate"]],
-            fmt="o", capsize=3, label=system, color=SYSTEM_COLORS.get(system),
+            fmt="o", capsize=3, label=SYSTEM_NAMES.get(system, system),
+            color=SYSTEM_COLORS.get(system),
         )
     ax.set_xticks(np.arange(len(terms)))
     ax.set_xticklabels(["per Class B word", "per Class A word", "per changed letter"])
@@ -556,8 +559,17 @@ def chart_regression(fit: pd.DataFrame, path: Path) -> None:
     plt.close(fig)
 
 
+def wilson_interval(right: pd.Series, n: pd.Series) -> tuple[np.ndarray, np.ndarray]:
+    """95% Wilson interval for a share: stays within 0 and 1, also for shares near 100%."""
+    right, n = np.asarray(right, dtype=float), np.asarray(n, dtype=float)
+    share = right / n
+    centre = (share + Z95**2 / (2 * n)) / (1 + Z95**2 / n)
+    half = Z95 * np.sqrt(share * (1 - share) / n + Z95**2 / (4 * n**2)) / (1 + Z95**2 / n)
+    return np.clip(centre - half, 0, 1), np.clip(centre + half, 0, 1)
+
+
 def chart_targeted(summary: pd.DataFrame, path: Path) -> None:
-    """Accuracy on the challenge set per version and system."""
+    """Accuracy on the challenge set per version and system, with 95% Wilson intervals."""
     import matplotlib
 
     matplotlib.use("Agg")
@@ -570,16 +582,18 @@ def chart_targeted(summary: pd.DataFrame, path: Path) -> None:
     width = 0.8 / len(systems)
     for i, system in enumerate(systems):
         rows = summary[summary["system"] == system].set_index("version").reindex(versions)
+        low, high = wilson_interval(rows["right"], rows["n"])
+        errors = np.vstack([rows["accuracy"] - low, high - rows["accuracy"]])
         ax.bar(
-            np.arange(len(versions)) + i * width, rows["accuracy"], width, label=system,
-            color=SYSTEM_COLORS.get(system),
+            np.arange(len(versions)) + i * width, rows["accuracy"], width, yerr=errors,
+            capsize=3, label=SYSTEM_NAMES.get(system, system), color=SYSTEM_COLORS.get(system),
         )
     ax.set_xticks(np.arange(len(versions)) + width * (len(systems) - 1) / 2)
     ax.set_xticklabels([f"{VERSION_LABELS[v]}\n(n = {counts[v]})" for v in versions])
     ax.set_ylim(0, 1.15)
     ax.set_yticks(np.arange(0, 1.01, 0.2))
     ax.set_ylabel("share of right readings")
-    ax.set_title("Challenge set: does the English keep the meaning of the Class B word?")
+    ax.set_title("Challenge set: does the English keep the meaning? (95% CI)")
     ax.legend(frameon=False, ncol=len(systems), loc="upper center")
     fig.tight_layout()
     fig.savefig(path, dpi=150)

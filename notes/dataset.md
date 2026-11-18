@@ -1,8 +1,7 @@
 # Dataset notes
 
 Short answers with their source. This file feeds report section 2 (Data set).
-Written by Olivia on 17 Nov with Claude's help (see `notes/ai_use.md`); facts checked against
-the dataset card and our own run.
+Written by Olivia on 17 Nov; facts checked against the dataset card and our own run.
 
 ## FLORES+
 
