@@ -1,7 +1,6 @@
 # Dataset notes
 
-Short answers with their source. This file feeds report section 2 (Data set).
-Written by Olivia on 17 Nov; facts checked against the dataset card and our own run.
+This file feeds report section 2 (Data set).
 
 ## FLORES+
 

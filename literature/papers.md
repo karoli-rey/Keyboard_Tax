@@ -24,9 +24,6 @@ whether the damaged word is still a real word.
 
 ## Entries
 
-Written on 17 Nov from the papers' own pages.
-Before citing a paper in the report, read the passage you cite.
-
 **Paper:** Chen, Adebara and Abdul-Mageed (NAACL 2024), Interplay of Machine Translation, Diacritics, and Diacritization. https://aclanthology.org/2024.naacl-long.420/
 **What they did:** Trained their own small translation models for 55 languages into English (36 African languages on Bible text, 19 European languages on Europarl, Portuguese among them), with and without diacritics in the source, and with diacritization as a second task.
 **What they found:** Keeping or removing diacritics changes BLEU very little (effect sizes 0.08 to 0.17). Learning to restore diacritics helps translation only with very little training data (up to 5,000 sentences).
@@ -59,16 +56,3 @@ Before citing a paper in the report, read the passage you cite.
 
 ---
 
-## Topics still to search
-
-From Lucy's notes; not searched yet. Find one or two key papers per topic; they go in the Introduction
-or in Future work, not in our experiments.
-
-| Topic | Search terms | Report section |
-|---|---|---|
-| Restoring accents automatically | diacritic restoration, diacritization | Future work |
-| Training MT on noisy or accent-free text | noise injection, data augmentation, robust NMT | Future work |
-| Subword tokenizers and accented letters | BPE, tokenization, diacritics | Optional extras |
-| Test sets that target one phenomenon | challenge set, contrastive evaluation, MT | Introduction |
-| Why BLEU misses meaning errors | BLEU, COMET, metric sensitivity, meaning-changing errors | Evaluation |
-| How often people really drop accents | accent omission, informal text, Portuguese social media | Introduction |
