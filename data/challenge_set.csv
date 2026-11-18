@@ -1,0 +1,188 @@
+sent_id,word,correct_reading,correct_pattern,wrong_pattern
+1,clínica,noun / adjective: clinic / clinical,clinic|clinics|clinical,practises|practices|practiced|practised
+3,secretária,noun: secretary,secretary,secretariat|office|department
+15,pôde,past: could,could happen|could have happened|could occur|could have occurred|could take place|could have taken place|could have gone|was able to|were able to|managed to,can happen|can occur|can take place|can go|may happen|may occur
+16,têm,plural: (they) have,have|they've,has
+25,anúncio,noun: announcement,announcement|announcements|ad|ads|advert|advertisement|notice,announces|announced
+33,manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+35,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+42,permitirá,future: will allow,will|'ll|shall|going,had|would|allowed|permitted|enabled
+49,estágio,noun: stage / internship,stage|stages|internship|phase,interns|interned
+51,irá,future: will,will|'ll|shall|going,anger|ire|wrath|rage|fury
+58,crítica,noun / adjective: criticism / critical,criticism|criticisms|critical|critic|critics|critique|review,criticizes|criticises|criticized|criticised
+63,agência,noun: agency,agency|agencies,arranges|brokers|negotiates
+66,média,adjective: middle (Idade Média = Middle Ages),middle|medieval|mid,measured|measuring|measures|media
+68,manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+78,anúncio,noun: announcement,announcement|announcements|ad|ads|advert|advertisement|notice,announces|announced
+89,forças,noun: forces,force|forces|strength|power|powers|troops|army|military,gallows|gibbet|noose
+90,força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+90,marés,noun: tides,tide|tides|tidal,seas|sea
+95,agência,noun: agency,agency|agencies,arranges|brokers|negotiates
+106,análise,noun: analysis,analysis|review,analyzes|analyzed
+106,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+107,médica,adjective / noun: medical / doctor,medical|doctor|doctors|physician|physicians|medicine,medicates|medicated|prescribes
+111,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+115,ajudará,future: will help,will|'ll|shall|going,had|would|helped
+124,veículo,noun: vehicle,vehicle|vehicles|car|craft,conveys|broadcasts|transmits|carries
+131,médica,adjective / noun: medical / doctor,medical|doctor|doctors|physician|physicians|medicine,medicates|medicated|prescribes
+141,agência,noun: agency,agency|agencies,arranges|brokers|negotiates
+144,capítulo,noun: chapter,chapter|chapters,capitulates|capitulated|surrenders|surrendered|yields
+150,médica,adjective / noun: medical / doctor,medical|doctor|doctors|physician|physicians|medicine,medicates|medicated|prescribes
+150,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+152,manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+156,está,"verb: is, are",is|are|it's|that's|he's|she's,this|these
+156,pública,adjective: public,public,publishes|publish|published
+160,à,à noite = at night,at night|by night|overnight|in the evening|during the night|in the night|at nighttime,warmer the night|hotter the night
+165,início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+168,república,noun: republic,republic,republishes|republish|republished
+173,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+179,última,adjective: last,last|latest|final|ultimate|recent,finalizes|finalises|finalized|finalised|completes
+180,acontecerá,future: will happen,will|'ll|shall|going,had|would|happened|occurred
+185,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+189,ópera,noun: opera,opera|operas,operates|operate|operating
+190,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+194,pôr,verb: to put (pôr fim a = to end),to end|put an end|to stop|to finish|to quit|to drop|to suspend|to terminate|to halt|to cease|to withdraw|to close,finally|at last|in the end|at the end|eventually|lastly
+195,fotógrafo,noun: photographer,photographer|photographers,photographs|photographed
+196,vítima,noun: victim,victim|victims,victimizes|victimises|victimized|victimised
+197,fotógrafo,noun: photographer,photographer|photographers,photographs|photographed
+197,trânsito,noun: traffic / transit,traffic|transit,transits|transited
+197,veículo,noun: vehicle,vehicle|vehicles|car|craft,conveys|broadcasts|transmits|carries
+198,fotógrafo,noun: photographer,photographer|photographers,photographs|photographed
+198,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+198,veículo,noun: vehicle,vehicle|vehicles|car|craft,conveys|broadcasts|transmits|carries
+216,agência,noun: agency,agency|agencies,arranges|brokers|negotiates
+221,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+231,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+260,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+266,manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+266,pública,adjective: public,public,publishes|publish|published
+271,contínua,adjective: continuous,continuous|continual|continuing|ongoing|constant|steady,continues
+277,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+280,polícia,noun: police,police|policeman|policemen|officers|cops,polices|patrols|patrolled
+287,está,"verb: is, are",is|are|it's|that's|he's|she's,this|these
+293,contínua,adjective: continuous,continuous|continual|continuing|ongoing|constant|steady,continues
+295,caça,noun: hunting / fighter jet,hunt|hunts|hunting|hunted|hunter|hunters|game|chase|fighter|fighters|poaching,poo|poop|poops|shit|crap|feces|faeces|excrement|caca
+299,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+299,prévia,adjective: prior,prior|previous|preview|preliminary|advance|beforehand,foresaw|predicted
+299,renúncia,noun: resignation,resignation|resign|resigned|waiver|renunciation,resigns|renounces|waives
+307,gerência,noun: management,management|manager|managers|managing,manages|managed
+307,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+317,bebê,noun: baby,baby|babies|infant|infants|newborn|newborns,drinks|drink|drinking|drank
+322,república,noun: republic,republic,republishes|republish|republished
+323,república,noun: republic,republic,republishes|republish|republished
+324,última,adjective: last,last|latest|final|ultimate|recent,finalizes|finalises|finalized|finalised|completes
+329,início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+332,início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+334,concorrerá,future: will run (for president),will|won't|would|going to|you'll|it'll|to run|to make a run|to stand|to compete,had|ran|have run|competed|contested
+336,tráfego,noun: traffic,traffic,drives|drive|travels
+342,trançado,adjective: braided,braided|braid|braids|woven|plaited|interwoven,locked|lock|locks
+343,às,às vezes = sometimes,sometimes|at times|occasionally|from time to time,the times
+346,é,verb: is,is|it's|that's|he's|she's,and
+352,às,às vezes = sometimes,sometimes|at times|occasionally|from time to time,the times
+366,força,noun: force,force|forces|strength|power|powers|forced,gallows|gibbet|noose
+369,caça,noun: hunting / fighter jet,hunt|hunts|hunting|hunted|hunter|hunters|game|chase|fighter|fighters|poaching,poo|poop|poops|shit|crap|feces|faeces|excrement|caca
+373,precisará,future: will need,will|won't|would|going to|you'll|it'll,had to|needed to
+404,início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+407,combatê,infinitive: fight,fight|fighting|combat|combating|tackle|tackling,fights|combats|tackles
+409,forças,noun: forces,force|forces|strength|power|powers|troops|army|military,gallows|gibbet|noose
+425,forças,noun: forces,force|forces|strength|power|powers|troops|army|military,gallows|gibbet|noose
+438,cristã,adjective: Christian,christian|christians|christianity,crest|crests|comb
+439,força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+450,estágio,noun: stage / internship,stage|stages|internship|phase,interns|interned
+454,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+459,vívida,adjective: vivid,vivid|vividly|lively,lived|living
+460,está,"verb: is, are",is|are|it's|that's|he's|she's,this|these
+461,encontrá,infinitive: find,find|finding|meet|meeting|locate,finds|meets|locates
+479,média,adjective: middle (Idade Média = Middle Ages),middle|medieval|mid,measured|measuring|measures|media
+495,média,adjective: middle (Idade Média = Middle Ages),middle|medieval|mid,measured|measuring|measures|media
+503,negligência,noun: negligence,negligence|neglect|negligent,neglects|neglected
+512,negligência,noun: negligence,negligence|neglect|negligent,neglects|neglected
+520,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+531,contêm,verb: contain (3pl),contain|contains|containing|include|includes,tell|tells|count|counts
+534,acordá,infinitive: wake,wake|waking|awaken,wakes|awakens
+536,líquido,adjective / noun: liquid,liquid|liquids|fluid|fluids|net,liquidates|liquidated|settles|settled
+538,força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+550,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+552,tráfego,noun: traffic,traffic,drives|drive|travels
+559,início,noun: beginning,beginning|start|early|outset|onset|began|begun,starts|begins|initiates|launches
+570,pública,adjective: public,public,publishes|publish|published
+574,têm,plural: (they) have,have|they've,has
+576,têm,plural: (they) have,have|they've,has
+580,doméstico,adjective: domestic,domestic|household|home|house,domesticates|tames|tamed
+588,bebê,noun: baby,baby|babies|infant|infants|newborn|newborns,drinks|drink|drinking|drank
+589,bebê,noun: baby,baby|babies|infant|infants|newborn|newborns,drinks|drink|drinking|drank
+607,manhã,noun: morning,morning|mornings|dawn,whim|whims|tantrum|tantrums|trick|tricks|knack|wiles
+613,tráfego,noun: traffic,traffic,drives|drive|travels
+614,tráfego,noun: traffic,traffic,drives|drive|travels
+615,tráfego,noun: traffic,traffic,drives|drive|travels
+616,tráfego,noun: traffic,traffic,drives|drive|travels
+619,têm,plural: (they) have,have|they've,has
+623,contrário,adjective: contrary / opposite,contrary|opposite|against|unlike|reverse,contradicts|opposes|upsets|annoys
+626,às,às vezes = sometimes,sometimes|at times|occasionally|from time to time,the times
+631,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+637,líquido,adjective / noun: liquid,liquid|liquids|fluid|fluids|net,liquidates|liquidated|settles|settled
+646,irá,future: will,will|'ll|shall|going,anger|ire|wrath|rage|fury
+649,têm,plural: (they) have,have|they've,has
+665,têm,plural: (they) have,have|they've,has
+683,é,verb: is,is|it's|that's|he's|she's,and
+687,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+688,crítica,noun / adjective: criticism / critical,criticisms|critical|critic|critics|critique|review,criticizes|criticises|criticized|criticised
+689,força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+689,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+703,é,verb: is,is|it's|that's|he's|she's,and
+708,abandoná,infinitive: abandon,abandon|abandoning|leave|leaving,abandons|leaves
+712,república,noun: republic,republic,republishes|republish|republished
+721,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+743,março,noun: March,march,landmark|landmarks|milestone|milestones|mark|marks|frame
+743,trânsito,noun: traffic / transit,traffic|transit,transits|transited
+746,caça,noun: hunting / fighter jet,hunt|hunts|hunting|hunted|hunter|hunters|game|chase|fighter|fighters|poaching,poo|poop|poops|shit|crap|feces|faeces|excrement|caca
+772,pacífica,adjective: peaceful,peaceful|peacefully|pacific|calm,pacifies|pacified|appeases
+775,têm,plural: (they) have,have|they've,has
+796,têm,plural: (they) have,have|they've,has
+800,têm,plural: (they) have,have|they've,has
+805,veículo,noun: vehicle,vehicle|vehicles|car|craft,conveys|broadcasts|transmits|carries
+806,tráfego,noun: traffic,traffic,drives|drive|travels
+810,às,às vezes = sometimes,sometimes|at times|occasionally|from time to time,the times
+815,março,noun: March,march,landmark|landmarks|milestone|milestones|mark|marks|frame
+825,força,noun: force,force|forces|strength|power|powers|forced|strong,gallows|gibbet|noose
+833,maçãs,noun: apples,apple|apples,stretcher|stretchers|gurney|gurneys
+837,líquido,adjective / noun: liquid,liquid|liquids|fluid|fluids|net,liquidates|liquidated|settles|settled
+839,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+844,é,verb: is,is|it's|that's|he's|she's,and
+846,têm,plural: (they) have,have|they've,has
+850,específico,adjective: specific,specific|specifically|particular,specifies|specified
+854,está,"verb: is, are",is|are|it's|that's|he's|she's,this|these
+858,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+860,precisará,future: will need,will|won't|would|going to|you'll|it'll|do not need|don't need|need not,had|needed|did not need|didn't need
+865,caça,noun: hunting / fighter jet,hunt|hunts|hunting|hunted|hunter|hunters|game|chase|fighter|fighters|poaching,poo|poop|poops|shit|crap|feces|faeces|excrement|caca
+868,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+868,visitará,future: will visit,will|'ll|shall|going,had|would|visited
+878,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+879,indicará,future: will indicate,will|'ll|shall|going,had|would|indicated|showed|pointed
+880,cobrirá,future: will cover,will|'ll|shall|going,had|would
+894,têm,plural: (they) have,have|they've,has
+896,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+903,têm,plural: (they) have,have|they've,has
+915,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+916,matrícula,noun: enrolment,registration|enrollment|enrolment|license|licence|plate|tuition,enrolls|enrols|registers|registered|enrolled
+923,à,à noite = at night,at night|by night|overnight|in the evening|during the night|in the night|at nighttime,sleep the night|sleeping the night|slept the night
+924,precisará,future: will need,will|'ll|shall|going,had|would
+927,têm,plural: (they) have,have|they've,has
+930,têm,plural: (they) have,have|they've,has
+933,faça,verb: do / make,do|does,knife|knives|blade
+933,privilégio,noun: privilege,privilege|privileged|privileges,favors|favours|favored|favoured
+936,privilégio,noun: privilege,privilege|privileged|privileges,favors|favours|favored|favoured
+938,república,noun: republic,republic,republishes|republish|republished
+939,país,noun: country,country|countries|nation|nations|national|nationwide|countrywide,parents|parent
+939,república,noun: republic,republic,republishes|republish|republished
+943,baía,bay,bay|gulf,stall|stable|cubicle|booth
+953,faça,verb: do / make,do|make|does|makes,knife|knives|blade
+957,público,noun / adjective: public / audience,public|audience|audiences|spectators|viewers|crowd,publishes|publish|published
+958,metrô,noun: subway,subway|metro|underground|tube,metre|metres|meter|meters
+960,facilitará,future: will make easier,will|'ll|shall|going,had|would|facilitated|eased
+961,desaparecerá,future: will disappear,will|'ll|shall|going,had|would|disappeared|vanished
+975,pronúncia,noun: pronunciation,pronunciation|pronunciations,pronounces
+976,pronúncia,noun: pronunciation,pronunciation|pronunciations|pronounced,pronounces
+979,ajudará,future: will help,will|won't|would|going to|you'll|it'll,had|helped
+991,precisará,future: will need,will|'ll|shall|going,had|would
+1000,cristãs,adjective: Christian,christian|christians|christianity,crest|crests|comb

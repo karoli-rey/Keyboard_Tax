@@ -15,7 +15,7 @@ outputs/2_review_sheet.csv (each word with an example sentence). It never overwr
 existing data/lexicon.csv without --force. Step 3 reads only the reviewed file, so
 rerunning this step never overwrites the review.
 
-To do:
+How it works:
     1. find_accented_words(): every distinct lowercased word with a diacritic. Skip names.
     2. load_is_word(): ask the Hunspell dictionary with spylls, Dictionary.lookup().
        Never read the .dic file as a word list: it holds stems, not inflected forms,
