@@ -49,15 +49,16 @@ are stored in the file, so it can also just be read.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e ".[dev]"                         # tests, results.ipynb, steps 1-3 and 6
 scripts/get_dictionary.sh                       # pt_BR dictionary for step 2, to data/raw/
-pytest                                          # run the tests
+pytest                                          # run the tests: 97 passed
 python -m keyboard_tax.versions --fixtures      # run a step on the example data
 python -m keyboard_tax.versions                 # run a step on the real data
 ```
 
-Steps 4 and 5 need a GPU for the full data: open `scripts/colab_gpu_run.ipynb` in Google Colab
-(about one hour in all). Results come back as a zip; unzip it into `outputs/`.
+Steps 4 and 5 also need the models: `pip install -e ".[dev,models]"`, on Python 3.11 or 3.12
+(torch has no release for Python 3.14 yet). For the full data they need a GPU: open
+`scripts/colab_gpu_run.ipynb` in Google Colab (about one hour in all). Results come back as a zip; unzip it into `outputs/`.
 On a laptop, try step 4 on the example data with
 `python -m keyboard_tax.translate --fixtures --systems opus_mt`.
 
