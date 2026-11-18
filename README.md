@@ -51,7 +51,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"                         # tests, results.ipynb, steps 1-3 and 6
 scripts/get_dictionary.sh                       # pt_BR dictionary for step 2, to data/raw/
-pytest                                          # run the tests: 97 passed
+pytest                                          # run the tests: 98 passed
 python -m keyboard_tax.versions --fixtures      # run a step on the example data
 python -m keyboard_tax.versions                 # run a step on the real data
 ```
