@@ -14,25 +14,29 @@ authors = [
   { name = "Karen Olivia Reyes Mendoza" },
   { name = "Thomas Schurter" },
 ]
-# Pin exact versions once the environment works for everyone.
+# The base install runs the tests, results.ipynb and steps 1-3 and 6 on any Python >= 3.10.
+# The translation and COMET models (steps 4-5) are an extra, because torch has no release
+# for the newest Python versions yet: install them on Python 3.11 or 3.12 (Colab has them).
 dependencies = [
   "pandas",
   "pyyaml",
-  "datasets",
-  "transformers",
-  "sentencepiece",
-  "torch",
-  "accelerate",
-  "sacremoses",
+  "matplotlib",
   "sacrebleu",
-  "unbabel-comet",
+  "datasets",
   "spylls==0.1.7",
   "wordfreq==3.1.1",
-  "matplotlib",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
+models = [               # steps 4 and 5: translation models and COMET
+  "torch",
+  "transformers",
+  "sentencepiece",
+  "accelerate",
+  "sacremoses",
+  "unbabel-comet",
+]
 gpu = ["bitsandbytes"]   # 4-bit loading of the LLM, only on a GPU machine (Colab)
 
 [tool.hatch.build.targets.wheel]
