@@ -103,8 +103,7 @@ scripts/
   get_dictionary.sh    downloads the pt_BR dictionary for step 2
 tests/               tests (pytest), with a small example of every table in fixtures/
 literature/          related work: one short entry per paper (no PDFs)
-notes/               how it was built: dataset.md, thomas_steps_1-3_notes.md,
-                     olivia_steps_4-6_notes.md, and Thomas's first demos in demos/
+notes/               how it was built: dataset.md and olivia_steps_4-6_notes.md
 .github/             runs the tests on every push; pull request template
 outputs/             created by the code, never committed (holds FLORES+ sentences)
 ```
