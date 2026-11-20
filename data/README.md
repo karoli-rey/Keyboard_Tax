@@ -45,7 +45,7 @@ such words are in almost every English sentence, so a word match cannot decide.
    deletes rows that do not work and fixes patterns in this file. The script never overwrites
    it without `--force`.
 
-Draft of 16 Nov: 159 rows. Review file of 16 Nov (from Thomas): 136 kept, 13 fixed, 10 deleted,
+Draft of 16 Nov: 159 rows. The native speaker's review (16 Nov): 136 kept, 13 fixed, 10 deleted,
 38 added by hand, among them a few *é, está, têm, à, às* sentences with patterns written for that
 sentence. Now 187 rows, 170 sentences, 74 words; every row passes rule 2, and no word occurs twice
 in its sentence. Step 6 checks each system's translation

@@ -75,6 +75,8 @@ All settings (models, seed, thresholds) are in `config.yaml`.
 | Researcher | Lucia Ivan | Report structure; ideas for the introduction and for future work |
 
 - One branch per task, merged through a pull request that a teammate reviews.
+- `main` is the final version. The branches `coder1/steps-1-3-squash` and
+  `coder2/steps-4-6` show how we built it.
 - Short commit messages that say what changed: `Add accent stripping`.
 - Changes to `classify.py` always get a second reader: a bug there changes the main result.
 - The use of AI tools is declared in the report.
