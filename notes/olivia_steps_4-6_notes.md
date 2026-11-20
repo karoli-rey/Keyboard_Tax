@@ -2,8 +2,8 @@
 
 Olivia (Coder 2) built steps 4 to 6: translate, score, analyze, and the draft of the challenge
 set. These notes say what each step does and why, so the report's sections 4 and 5 can be
-written from them. Steps 1 to 3 are in `thomas_steps_1-3_notes.md`; the results with their
-explanation are in `results.ipynb`.
+written from them. Steps 1 to 3 are described at the top of `data.py`, `classify.py` and
+`versions.py`; the results with their explanation are in `results.ipynb`.
 
 ## Starting point
 
