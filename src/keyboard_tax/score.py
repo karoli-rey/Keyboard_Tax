@@ -17,7 +17,7 @@ How it works:
          "both_classes" only the sentences that have all five versions (Class A and Class B
                         words). Compare a_only, b_only and noise with clean on THIS subset.
     4. Identical translations are scored once. The sacreBLEU signatures are printed; copy
-       them into the report (they are also in notes/olivia_steps_4-6_notes.md).
+       them into the report (they are also in docs/pipeline.md).
 
 Try it:    python -m keyboard_tax.score --fixtures --skip-comet
 Full run:  python -m keyboard_tax.score          (on a GPU: scripts/colab_gpu_run.ipynb)

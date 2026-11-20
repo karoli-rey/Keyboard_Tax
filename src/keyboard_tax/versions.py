@@ -31,7 +31,6 @@ How it works:
        the first 25%, 50% or 75% of that order. Switched off in config.yaml (not used).
     6. Write the table with write_table(df, "versions").
 
-Thomas's demo in notes/demos/perturb_demo.py shows a first version of steps 4 and 5.
 """
 
 import argparse
